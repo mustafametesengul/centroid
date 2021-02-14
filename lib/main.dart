@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:centroid/places.dart';
 import 'package:centroid/location.dart';
 import 'package:centroid/utils.dart';
+import 'package:centroid/database.dart';
 import 'dart:math';
 
 void main() {
@@ -49,6 +50,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
     List<Point> ls = [Point(41.036882, 28.845845), Point(41.058321, 28.984073)];
     print(centroid(ls));
+
+    Database database = Database();
+    database.addUser("Test22");
 
     return Scaffold(
       appBar: AppBar(
