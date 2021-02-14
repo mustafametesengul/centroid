@@ -1,6 +1,8 @@
+import 'package:flutter/material.dart';
 import 'package:centroid/places.dart';
 import 'package:centroid/location.dart';
-import 'package:flutter/material.dart';
+import 'package:centroid/utils.dart';
+import 'dart:math';
 
 void main() {
   runApp(MyApp());
@@ -42,8 +44,11 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     // Places places = Places();
     // places.getPlaces();
-    Location location = Location();
-    location.getLocation().then((value) => print(value));
+    // Location location = Location();
+    // location.getLocation().then((value) => print(value));
+
+    List<Point> ls = [Point(41.036882, 28.845845), Point(41.058321, 28.984073)];
+    print(centroid(ls));
 
     return Scaffold(
       appBar: AppBar(
