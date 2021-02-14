@@ -1,4 +1,5 @@
 import 'package:centroid/places.dart';
+import 'package:centroid/location.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -39,8 +40,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    Places places = Places();
-    places.getLocations();
+    // Places places = Places();
+    // places.getPlaces();
+    Location location = Location();
+    location.getLocation().then((value) => print(value));
 
     return Scaffold(
       appBar: AppBar(
