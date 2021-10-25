@@ -3,7 +3,7 @@ import 'dart:math';
 
 class Places {
   GooglePlace googlePlace =
-      GooglePlace("AIzaSyBT-cjrMLyKc-MYeLz1qNnb4KjQTIxj74s");
+      GooglePlace("...");
 
   Future<NearBySearchResponse> getPlaces(Point location) async {
     NearBySearchResponse result = await googlePlace.search.getNearBySearch(
